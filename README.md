@@ -1,8 +1,8 @@
 # opencode-go-usage-cli
 
-A small CLI that shows your **OpenCode Go** plan usage — rolling (5-hour), weekly and monthly — for every OpenCode Console account logged in on this machine, with percentages and reset countdowns, plus a `--json` mode for scripts/statuslines.
+A small CLI that shows your **OpenCode Go** plan usage — rolling (5-hour), weekly and monthly — for **all** your OpenCode Console accounts at once, with percentages and reset countdowns, plus a `--json` mode for scripts/statuslines.
 
-Works with multiple accounts (e.g. if you alternate between two Go plans).
+**Main benefit:** the OpenCode Console only shows the usage of one account at a time. If you have more than one Go plan (e.g. two accounts you alternate between), `go-usage` shows them side by side — no more logging in/out to check each one.
 
 > **Unofficial.** Not affiliated with or endorsed by OpenCode. It talks to the same private endpoints the web Console uses and reads the local opencode database, so it may break if those change.
 
@@ -42,10 +42,15 @@ go-usage --timeout 8000  # per-request timeout in ms
 Example:
 
 ```
-dev@example.com — Example Org · go ●
+dev@example.com — Example Org · go
   Rolling usage  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░]   2% used   Resets in 4h 43m
   Weekly usage   [█░░░░░░░░░░░░░░░░░░░░░░░░░░░]   4% used   Resets in 6d 7h
   Monthly usage  [███████████████░░░░░░░░░░░░░]  52% used   Resets in 25d 4h
+
+second@example.com — Personal · go ●
+  Rolling usage  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0% used   Resets in 2h 4m
+  Weekly usage   [█░░░░░░░░░░░░░░░░░░░░░░░░░░░]   1% used   Resets in 6d 6h
+  Monthly usage  [███████░░░░░░░░░░░░░░░░░░░░░]  25% used   Resets in 17d 15h
 ```
 
 The `●` marks the active account/org. Colors: green < 50%, yellow 50–80%, red ≥ 80%.
@@ -102,9 +107,9 @@ MIT — see [LICENSE](LICENSE).
 
 # opencode-go-usage-cli (Português)
 
-Uma CLI simples que mostra o uso do seu plano **OpenCode Go** — rolling (5 horas), semanal e mensal — para todas as contas do Console do OpenCode logadas nesta máquina, com percentuais e contagem regressiva para o reset, além de um modo `--json` para scripts/statusline.
+Uma CLI simples que mostra o uso do seu plano **OpenCode Go** — rolling (5 horas), semanal e mensal — para **todas** as suas contas do Console do OpenCode de uma vez, com percentuais e contagem regressiva para o reset, além de um modo `--json` para scripts/statusline.
 
-Funciona com várias contas (por exemplo, se você alterna entre dois planos Go).
+**Principal benefício:** o Console do OpenCode só mostra o uso de uma conta por vez. Se você tem mais de um plano Go (por exemplo, duas contas que alterna), o `go-usage` mostra as duas lado a lado — sem precisar ficar deslogando e logando para conferir cada uma.
 
 > **Não oficial.** Sem vínculo ou endosso do OpenCode. A ferramenta conversa com os mesmos endpoints privados que o Console web usa e lê o banco local do opencode, então pode quebrar se isso mudar.
 
@@ -144,10 +149,15 @@ go-usage --timeout 8000  # timeout por requisição em ms
 Exemplo:
 
 ```
-dev@example.com — Example Org · go ●
+dev@example.com — Example Org · go
   Rolling usage  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░]   2% used   Resets in 4h 43m
   Weekly usage   [█░░░░░░░░░░░░░░░░░░░░░░░░░░░]   4% used   Resets in 6d 7h
   Monthly usage  [███████████████░░░░░░░░░░░░░]  52% used   Resets in 25d 4h
+
+second@example.com — Personal · go ●
+  Rolling usage  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0% used   Resets in 2h 4m
+  Weekly usage   [█░░░░░░░░░░░░░░░░░░░░░░░░░░░]   1% used   Resets in 6d 6h
+  Monthly usage  [███████░░░░░░░░░░░░░░░░░░░░░]  25% used   Resets in 17d 15h
 ```
 
 O `●` marca a conta/org ativa. Cores: verde < 50%, amarela 50–80%, vermelha ≥ 80%.
