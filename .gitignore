@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+
+# local data / secrets
+*.db
+*.db-shm
+*.db-wal
+.env
+.env.*
+
+# generated artifacts
+generated/
+*.log
+
+# os
+.DS_Store
+Thumbs.db
