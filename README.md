@@ -2,8 +2,6 @@
 
 A small CLI that shows your **OpenCode Go** plan usage — rolling (5-hour), weekly and monthly — for **all** your OpenCode Console accounts at once, with percentages and reset countdowns, plus a `--json` mode for scripts/statuslines.
 
-![OpenCode Go usage panel](docs/console-usage.png)
-
 **Main benefit:** the OpenCode Console only shows the usage of one account at a time. If you have more than one Go plan (e.g. two accounts you alternate between), `go-usage` shows them side by side — no more logging in/out to check each one.
 
 > **Unofficial.** Not affiliated with or endorsed by OpenCode. It talks to the same private endpoints the web Console uses and reads the local opencode database, so it may break if those change.
@@ -110,8 +108,6 @@ MIT — see [LICENSE](LICENSE).
 # opencode-go-usage-cli (Português)
 
 Uma CLI simples que mostra o uso do seu plano **OpenCode Go** — rolling (5 horas), semanal e mensal — para **todas** as suas contas do Console do OpenCode de uma vez, com percentuais e contagem regressiva para o reset, além de um modo `--json` para scripts/statusline.
-
-![Painel de usage do OpenCode Go](docs/console-usage.png)
 
 **Principal benefício:** o Console do OpenCode só mostra o uso de uma conta por vez. Se você tem mais de um plano Go (por exemplo, duas contas que alterna), o `go-usage` mostra as duas lado a lado — sem precisar ficar deslogando e logando para conferir cada uma.
 
